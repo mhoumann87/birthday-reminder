@@ -163,14 +163,38 @@ a:where(:hover, :focus-visible) {
 
 /* Components */
 
+header .container {
+  --flex-dir: column;
+}
+
+@media screen and (min-width: 780px) {
+  header .container {
+    --flex-dir: row;
+    padding-block: 0.5rem;
+  }
+}
+
+nav .nav {
+  --flex-dir: row;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-link a {
+  text-decoration: none;
+  padding-block-end: 0.5rem;
+  font-size: var(--fs-medium);
+}
+
+.nav-link a.active {
+  border-bottom: 3px solid var(--clr-text-light);
+  color: var(--clr-text-light);
+}
+
 header,
 footer {
   background-color: var(--clr-accent);
   color: var(--clr-text-light);
-}
-
-header {
-  text-align: center;
 }
 
 footer .container {
@@ -193,3 +217,5 @@ footer .container {
     width: 2rem;
   }
 }
+
+/* Pages */
