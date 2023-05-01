@@ -4,7 +4,7 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer>
+    <footer className='shadow'>
       <div className='container flex'>
         <p>
           Copyright &copy;{year > 2023 ? `2023 - ${year}` : year} by{' '}
