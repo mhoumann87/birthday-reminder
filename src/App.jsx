@@ -1,8 +1,17 @@
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 function App() {
   return (
     <>
-      <h1>New App</h1>
-      <p>This is just a new app</p>
+      <Header />
+      <main>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae,
+          ipsum!
+        </p>
+      </main>
+      <Footer />
     </>
   );
 }

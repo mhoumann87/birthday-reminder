@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&display=swap');
+
+:root {
+  --clr-background: #d2d7d9;
+  --clr-accent: #384031;
+  --clr-text: #0b0c0d;
+  --clr-text-light: #d9b1a3;
+  --clr-link: #a68572;
+
+  --ff-main: 'Kanit', sans-serif;
+
+  --fw-thin: 200;
+  --fw-reg: 400;
+  --fw-bold: 600;
+
+  --fs-small: 1rem;
+  --fs-reg: 1.3rem;
+  --fs-medium: 1.7rem;
+  --fs-large: 2.4rem;
+  --fs-xl: 3rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+  font-family: var(--ff-main);
+  font-size: var(--fs-reg);
+}
+
+img,
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2 {
+  font-weight: var(--fw-thin);
+  margin: 0;
+  line-height: 1;
+}
+
+h1 {
+  font-size: var(--fs-xl);
+}
+
+h2 {
+  font-size: var(--fs-large);
+}
+
+h3 {
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-bold);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.small {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bold);
+}
+
+a {
+  color: var(--clr-link);
+  transition: color 350ms ease;
+}
+
+a:where(:hover, :focus-visible) {
+  color: inherit;
+}
+
+/* Utility classes */
+.sr-only {
+  width: 0;
+  height: 0;
+  display: none;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+}
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+  flex-direction: var(--flex-dir, row);
+  justify-content: var(--flex-justify, space-between);
+  align-items: var(--flex-align, center);
+  gap: var(--flex-gap, 1rem);
+}
+
+.shadow {
+  box-shadow: 6px 4px 29px -6px rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: 6px 4px 29px -6px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 6px 4px 29px -6px rgba(0, 0, 0, 0.32);
+}
+
+.container {
+  width: calc(100% - 1.75rem);
+  margin: 1rem auto;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: min(90%, 749px);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .container {
+    width: min(80%, 1400px);
+  }
+}
+
+.padding {
+  padding: var(--padding-xy, 1rem);
+}
+.padding-x {
+  padding-inline: var(--padding-x, 1rem);
+}
+.padding-y {
+  padding-block: var(--padding-y, 1rem);
+}
+
+.margin {
+  margin: var(--margin-xy, 1rem);
+}
+.margin-x {
+  margin-inline: var(--margin-x, 1rem);
+}
+.margin-y {
+  margin-block: var(--margin-y, 1rem);
+}
+
+/* Components */
+
+header,
+footer {
+  background-color: var(--clr-accent);
+  color: var(--clr-text-light);
+}
+
+header {
+  text-align: center;
+}
+
+footer .container {
+  --flex-dir: column;
+}
+
+.social-icons {
+  --flex-dir: row;
+}
+
+.social-icons svg {
+  width: 1.4rem;
+}
+
+@media screen and (min-width: 900px) {
+  footer .container {
+    --flex-dir: row;
+  }
+  .social-icons svg {
+    width: 2rem;
+  }
+}
