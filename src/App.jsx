@@ -8,7 +8,7 @@ import Friend from './pages/friend';
 import New from './pages/New';
 import Missing from './pages/Missing';
 
-function App() {
+const App = () => {
   const friendList = [
     {
       id: 1,
@@ -89,6 +89,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

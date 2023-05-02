@@ -161,6 +161,16 @@ a:where(:hover, :focus-visible) {
   margin-block: var(--margin-y, 1rem);
 }
 
+.card {
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 680px) {
+  .card {
+    width: min(90%, 750px);
+  }
+}
+
 /* Components */
 
 header .container {
@@ -219,3 +229,16 @@ footer .container {
 }
 
 /* Pages */
+
+.missing .container {
+  place-items: center;
+}
+
+.missing img {
+  max-width: 600px;
+}
+
+.missing .container .card {
+  place-items: center;
+  padding-block-end: 1rem;
+}
