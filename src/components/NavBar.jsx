@@ -5,10 +5,13 @@ const NavBar = () => {
     <nav>
       <ul className='nav flex'>
         <li className='nav-link'>
-          <NavLink to='/'>Full List</NavLink>
+          <NavLink to='/'>Today</NavLink>
         </li>
         <li className='nav-link'>
-          <NavLink to='/new'>Add New</NavLink>
+          <NavLink to='/friends'>Friends</NavLink>
+        </li>
+        <li className='nav-link'>
+          <NavLink to='/new'>New</NavLink>
         </li>
       </ul>
     </nav>
