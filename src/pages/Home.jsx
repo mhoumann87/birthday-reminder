@@ -1,11 +1,11 @@
-const Home = ({ friends }) => {
+import List from '../components/List';
+
+const Home = ({ today }) => {
   return (
     <main className='container'>
-      <ul>
-        {friends.map(friend => {
-          return <li key={friend.id}>{friend.name}</li>;
-        })}
-      </ul>
+      <div className='card'>
+        <List list={today} />
+      </div>
     </main>
   );
 };

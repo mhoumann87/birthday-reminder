@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -15,9 +15,9 @@ const App = () => {
       name: 'Bertie Yates',
       image:
         'https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg',
-      day: 1,
+      day: 3,
       month: 5,
-      year: 2008,
+      year: 1999,
       phone: '555-471-2345',
       mail: 'me@you.com',
       web: 'https://facebook.com',
@@ -29,7 +29,7 @@ const App = () => {
         'https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-3_rxtqvi.jpg',
       day: 5,
       month: 9,
-      year: 2008,
+      year: 1987,
       phone: '555-471-2345',
       mail: 'me@you.com',
       web: 'https://facebook.com',
@@ -41,7 +41,7 @@ const App = () => {
         'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg',
       day: 23,
       month: 2,
-      year: 2008,
+      year: 2003,
       phone: '555-471-2345',
       mail: 'me@you.com',
     },
@@ -51,7 +51,7 @@ const App = () => {
 
       image:
         'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg',
-      day: 1,
+      day: 3,
       month: 5,
       year: 2008,
       phone: '555-471-2345',
@@ -60,24 +60,34 @@ const App = () => {
     {
       id: 5,
       name: 'Lola Gardner',
-
       image:
         'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg',
       day: 25,
       month: 12,
-      year: 2008,
+      year: 1992,
       phone: '555-471-2345',
       mail: 'me@you.com',
     },
   ];
 
   const [friends, setFriends] = useState(friendList);
+  const [today, setToday] = useState([]);
+
+  const day = new Date().getDay();
+  const month = new Date().getMonth() + 1;
+
+  useEffect(() => {
+    const friendsToday = friends.filter(
+      friend => friend.day === day && friend.month === month
+    );
+    setToday(friendsToday);
+  }, [friends]);
 
   return (
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<Home friends={friends} />} />
+        <Route path='/' element={<Home today={today} />} />
         <Route path='/friends' element={<Friends />} />
         <Route path='/friends/:id' element={<Friend />} />
         <Route
