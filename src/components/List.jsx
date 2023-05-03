@@ -4,7 +4,7 @@ const List = ({ list }) => {
   return (
     <>
       {list.length && (
-        <ul>
+        <ul className='friend-list flex'>
           {list.map(item => (
             <ListItem key={item.id} item={item} />
           ))}

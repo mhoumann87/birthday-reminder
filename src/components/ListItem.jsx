@@ -5,11 +5,13 @@ const ListItem = ({ item }) => {
   const year = new Date().getFullYear();
   return (
     <Link to={`/friends/${item.id}`}>
-      <li>
+      <li className='list-item flex'>
         <p className='sr-only'>Link to all info about {item.name}</p>
         <img src={item.image ? item.image : profilePic} alt={item.name} />
-        <h3>{item.name}</h3>
-        <p className='small'>Age {year - item.year}</p>
+        <div className='list-content'>
+          <h3>{item.name}</h3>
+          <p className='small'>Age {year - item.year}</p>
+        </div>
       </li>
     </Link>
   );
