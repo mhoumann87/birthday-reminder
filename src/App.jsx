@@ -44,6 +44,7 @@ const App = () => {
       year: 2003,
       phone: '555-471-2345',
       mail: 'me@you.com',
+      web: 'https://facebook.com',
     },
     {
       id: 4,
@@ -56,6 +57,7 @@ const App = () => {
       year: 2008,
       phone: '555-471-2345',
       mail: 'me@you.com',
+      web: 'https://facebook.com',
     },
     {
       id: 5,
@@ -67,6 +69,7 @@ const App = () => {
       year: 1992,
       phone: '555-471-2345',
       mail: 'me@you.com',
+      web: 'https://facebook.com',
     },
   ];
 
