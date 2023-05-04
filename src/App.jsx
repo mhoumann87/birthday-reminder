@@ -15,7 +15,7 @@ const App = () => {
       name: 'Bertie Yates',
       image:
         'https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg',
-      day: 3,
+      day: 4,
       month: 5,
       year: 1999,
       phone: '555-471-2345',
@@ -51,7 +51,7 @@ const App = () => {
 
       image:
         'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg',
-      day: 3,
+      day: 4,
       month: 5,
       year: 2008,
       phone: '555-471-2345',
@@ -68,6 +68,21 @@ const App = () => {
       phone: '555-471-2345',
       mail: 'me@you.com',
     },
+  ];
+
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
   ];
 
   const [friends, setFriends] = useState(friendList);
@@ -89,7 +104,10 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home today={today} />} />
         <Route path='/friends' element={<Friends />} />
-        <Route path='/friends/:id' element={<Friend />} />
+        <Route
+          path='/friends/:id'
+          element={<Friend friends={friends} months={months} />}
+        />
         <Route
           path='/new'
           element={<New friends={friends} setFriends={setFriends} />}

@@ -258,6 +258,7 @@ footer .container {
 .list-item {
   --flex-dir: row;
   color: var(--clr-text);
+  background: hotpink;
 }
 
 .list-item img {
@@ -265,11 +266,11 @@ footer .container {
   width: 100px;
   aspect-ratio: 1;
   border-radius: 50%;
-  flex-shrink: 1;
 }
 
 .list-content {
   padding-inline: 1rem;
+  flex-grow: 1;
 }
 
 .list-content h3 {

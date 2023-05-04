@@ -5,7 +5,7 @@ const ListItem = ({ item }) => {
   const year = new Date().getFullYear();
   return (
     <Link to={`/friends/${item.id}`}>
-      <li className='list-item flex'>
+      <li className='list-item flex shadow'>
         <p className='sr-only'>Link to all info about {item.name}</p>
         <img src={item.image ? item.image : profilePic} alt={item.name} />
         <div className='list-content'>
