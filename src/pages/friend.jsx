@@ -15,14 +15,14 @@ const Friend = ({ friends, months }) => {
   return (
     <>
       <main className='friend-info grid'>
-        <div className='card flex'>
+        <div className='card flex shadow'>
           {friend && (
             <>
               <img
                 src={friend.image ? friend.image : profilePic}
                 alt='friend.name'
               />
-              <div className='info-box'>
+              <div className='info-box padding-x'>
                 <h2>{friend.name}</h2>
                 <p>
                   Birthday: {month} {friend.day} {friend.year}

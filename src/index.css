@@ -228,12 +228,6 @@ footer .container {
   }
 }
 
-/* Pages */
-
-.home {
-  justify-items: center;
-}
-
 .list-card {
   border-radius: 20px;
   width: calc(100% - 1.5rem);
@@ -278,8 +272,39 @@ footer .container {
   line-height: 1;
 }
 
+/* Pages */
+
+.home {
+  justify-items: center;
+}
+
 .home a {
   text-decoration: none;
+}
+
+.friend-info {
+  place-items: center;
+}
+
+.friend-info .card {
+  --flex-dir: column;
+  margin-block: 1rem;
+  width: calc(100% - 1.5rem);
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .friend-info .card {
+    --flex-dir: row;
+    width: min(90%, 800px);
+  }
+}
+
+.friend-info .card img {
+  object-fit: cover;
+  width: 350px;
+  aspect-ratio: 1;
+  border-radius: 20px 0 0 20px;
 }
 
 .missing .container {
