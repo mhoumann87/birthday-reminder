@@ -4,7 +4,7 @@ const Home = ({ today }) => {
   return (
     <main className='home grid'>
       {today.length ? (
-        <div className='list-card shadow flex'>
+        <div className='list-card shadow'>
           <List list={today} />
         </div>
       ) : (

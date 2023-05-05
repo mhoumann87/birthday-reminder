@@ -15,7 +15,7 @@ const App = () => {
       name: 'Bertie Yates',
       image:
         'https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg',
-      day: 4,
+      day: 5,
       month: 5,
       year: 1999,
       phone: '555-471-2345',
@@ -52,7 +52,7 @@ const App = () => {
 
       image:
         'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg',
-      day: 4,
+      day: 5,
       month: 5,
       year: 2008,
       phone: '555-471-2345',

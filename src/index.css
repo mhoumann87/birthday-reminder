@@ -243,7 +243,7 @@ footer .container {
 .friend-list {
   --flex-dir: column;
   --flex-gap: 1.5rem;
-
+  width: 100%;
   list-style: none;
   padding: 1rem 0;
   margin: 0;
@@ -252,7 +252,7 @@ footer .container {
 .list-item {
   --flex-dir: row;
   color: var(--clr-text);
-  background: hotpink;
+  border-radius: 20px;
 }
 
 .list-item img {
