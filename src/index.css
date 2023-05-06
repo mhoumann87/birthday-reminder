@@ -129,6 +129,10 @@ a:where(:hover, :focus-visible) {
   margin: 1rem auto;
 }
 
+.text-center {
+  text-align: center;
+}
+
 @media screen and (min-width: 600px) {
   .container {
     width: min(90%, 749px);
@@ -234,6 +238,16 @@ footer .container {
   margin: 1rem;
 }
 
+.list-card header {
+  border-radius: 20px 20px 0 0;
+  padding: 0.25rem 0.75rem;
+}
+
+.list-card header h3 {
+  margin: 0;
+  padding: 0;
+}
+
 @media screen and (min-width: 550px) {
   .list-card {
     width: 550px;
@@ -280,6 +294,11 @@ footer .container {
 
 .home a {
   text-decoration: none;
+}
+
+.friends-header {
+  --flex-dir: row;
+  height: auto;
 }
 
 .friend-info {
