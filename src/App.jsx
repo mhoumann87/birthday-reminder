@@ -74,6 +74,7 @@ const App = () => {
   ];
 
   const months = [
+    'All',
     'January',
     'February',
     'March',

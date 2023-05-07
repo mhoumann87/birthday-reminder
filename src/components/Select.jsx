@@ -4,7 +4,9 @@ const Select = ({ list }) => {
       {list.length && (
         <select>
           {list.map(item => (
-            <option value={list.indexOf(item) + 1}>{item}</option>
+            <option key={list.indexOf(item)} value={list.indexOf(item)}>
+              {item}
+            </option>
           ))}
         </select>
       )}
