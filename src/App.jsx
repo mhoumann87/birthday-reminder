@@ -107,7 +107,10 @@ const App = () => {
       <Header />
       <Routes>
         <Route path='/' element={<Home today={today} />} />
-        <Route path='/friends' element={<Friends list={months} />} />
+        <Route
+          path='/friends'
+          element={<Friends list={months} friends={friends} />}
+        />
         <Route
           path='/friends/:id'
           element={<Friend friends={friends} months={months} />}

@@ -288,7 +288,8 @@ footer .container {
 
 /* Pages */
 
-.home {
+.home,
+.friends {
   justify-items: center;
 }
 

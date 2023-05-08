@@ -1,6 +1,7 @@
+import List from '../components/List';
 import Select from '../components/Select';
 
-const Friends = ({ list }) => {
+const Friends = ({ list, friends }) => {
   return (
     <main className='friends grid'>
       <div className='list-card shadow'>
@@ -10,6 +11,11 @@ const Friends = ({ list }) => {
             <Select list={list} />
           </form>
         </header>
+        {friends.length ? (
+          <List list={friends} />
+        ) : (
+          <h3>No friends in your app</h3>
+        )}
       </div>
     </main>
   );
