@@ -91,6 +91,7 @@ const App = () => {
 
   const [friends, setFriends] = useState(friendList);
   const [today, setToday] = useState([]);
+  const [birthMonth, setBirthMonth] = useState(months[0]);
 
   const day = new Date().getDay();
   const month = new Date().getMonth() + 1;
@@ -102,6 +103,11 @@ const App = () => {
     setToday(friendsToday);
   }, [friends]);
 
+  const handelChange = e => {
+    const searchMonth = e.target.value;
+    setBirthMonth(searchMonth);
+  };
+
   return (
     <>
       <Header />
@@ -109,7 +115,14 @@ const App = () => {
         <Route path='/' element={<Home today={today} />} />
         <Route
           path='/friends'
-          element={<Friends list={months} friends={friends} />}
+          element={
+            <Friends
+              list={months}
+              friends={friends}
+              handelChange={handelChange}
+              birthMonth={birthMonth}
+            />
+          }
         />
         <Route
           path='/friends/:id'

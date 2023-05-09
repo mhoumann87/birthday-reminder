@@ -1,8 +1,8 @@
-const Select = ({ list }) => {
+const Select = ({ list, handelChange, selected }) => {
   return (
     <>
       {list.length && (
-        <select>
+        <select value={selected} onChange={handelChange}>
           {list.map(item => (
             <option key={list.indexOf(item)} value={list.indexOf(item)}>
               {item}
