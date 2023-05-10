@@ -91,7 +91,7 @@ const App = () => {
 
   const [friends, setFriends] = useState(friendList);
   const [today, setToday] = useState([]);
-  const [birthMonth, setBirthMonth] = useState(months[0]);
+  const [birthMonth, setBirthMonth] = useState(0);
 
   const day = new Date().getDay();
   const month = new Date().getMonth() + 1;
@@ -103,10 +103,9 @@ const App = () => {
     setToday(friendsToday);
   }, [friends]);
 
-  const handelChange = e => {
-    const searchMonth = e.target.value;
-    setBirthMonth(searchMonth);
-  };
+  useEffect(() => {
+    console.log('Month changed ' + birthMonth);
+  }, [birthMonth, setBirthMonth]);
 
   return (
     <>
@@ -119,7 +118,7 @@ const App = () => {
             <Friends
               list={months}
               friends={friends}
-              handelChange={handelChange}
+              setBirthMonth={setBirthMonth}
               birthMonth={birthMonth}
             />
           }

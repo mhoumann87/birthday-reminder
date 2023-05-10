@@ -1,7 +1,7 @@
 import List from '../components/List';
 import Select from '../components/Select';
 
-const Friends = ({ list, friends, handelChange, birthMonth }) => {
+const Friends = ({ list, friends, setBirthMonth, birthMonth }) => {
   return (
     <main className='friends grid'>
       <div className='list-card shadow'>
@@ -10,7 +10,7 @@ const Friends = ({ list, friends, handelChange, birthMonth }) => {
             <label htmlFor='months'>Set Month</label>
             <Select
               list={list}
-              handelChange={handelChange}
+              setChange={setBirthMonth}
               selected={birthMonth}
             />
           </form>
