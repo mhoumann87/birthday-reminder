@@ -107,6 +107,10 @@ const App = () => {
     console.log('Month changed ' + birthMonth);
   }, [birthMonth, setBirthMonth]);
 
+  const handleSubmit = () => {
+    console.log('submitted');
+  };
+
   return (
     <>
       <Header />
@@ -129,7 +133,7 @@ const App = () => {
         />
         <Route
           path='/new'
-          element={<New friends={friends} setFriends={setFriends} />}
+          element={<New friends={friends} handleSubmit={handleSubmit} />}
         />
         <Route path='*' element={<Missing />} />
       </Routes>

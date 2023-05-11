@@ -1,14 +1,15 @@
-const Select = ({ list, handelChange, selected, setChange }) => {
+const Select = ({ list, selected, setChange }) => {
+  console.log(selected);
   return (
     <>
       {list.length && (
         <select value={selected} onChange={e => setChange(e.target.value)}>
-          {list.map(item => (
+          {list.map((value, key) => (
             <option
-              key={list.indexOf(item)}
-              value={list.indexOf(item)}
-              aria-selected={list.indexOf(item) === selected ? true : false}>
-              {item}
+              key={key}
+              value={key}
+              aria-selected={key === selected ? true : false}>
+              {value}
             </option>
           ))}
         </select>
