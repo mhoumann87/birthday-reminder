@@ -89,14 +89,18 @@ const App = () => {
     'December',
   ];
 
-  const [friends, setFriends] = useState(friendList);
+  const [friends, setFriends] = useState([]);
   const [today, setToday] = useState([]);
   const [birthMonth, setBirthMonth] = useState(0);
 
-  const day = new Date().getDay();
-  const month = new Date().getMonth() + 1;
+  useEffect(() => {
+    setFriends(friendList);
+  }, []);
 
   useEffect(() => {
+    const day = new Date().getDay();
+    const month = new Date().getMonth() + 1;
+    console.log(day, month);
     const friendsToday = friends.filter(
       friend => friend.day === day && friend.month === month
     );
