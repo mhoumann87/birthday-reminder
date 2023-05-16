@@ -289,7 +289,8 @@ footer .container {
 /* Pages */
 
 .home,
-.friends {
+.friends,
+.new-friend {
   justify-items: center;
 }
 
@@ -327,8 +328,38 @@ footer .container {
   border-radius: 20px 0 0 20px;
 }
 
+.new-friend,
 .missing .container {
   place-items: center;
+}
+
+.new-friend .card {
+  --flex-dir: column;
+}
+
+.new-friend h2 {
+  align-self: flex-start;
+}
+
+.new-friend form {
+  width: 100%;
+}
+
+.new-friend input {
+  width: 100%;
+  font-size: var(--fs-reg);
+  padding: 0.25rem;
+  border: none;
+  border-bottom: 3px solid var(--clr-accent);
+  background-color: var(--clr-background);
+}
+
+.new-friend input[type='submit'] {
+  align-self: flex-start;
+  width: auto;
+  border: 2px solid var(--clr-accent);
+  padding: 0.35rem;
+  cursor: pointer;
 }
 
 .missing img {

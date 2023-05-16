@@ -1,9 +1,9 @@
 const New = ({ handleSubmit }) => {
   return (
-    <main className='grid'>
-      <section className='card flex'>
+    <main className='grid new-friend'>
+      <section className='card flex shadow padding'>
         <h2>Add Friend</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='flex'>
           <label htmlFor='name' className='sr-only'>
             Enter Name
           </label>
