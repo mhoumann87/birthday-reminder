@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Friends from './pages/friends';
-import Friend from './pages/friend';
+import Friends from './pages/Friends';
+import Friend from './pages/Friend';
 import New from './pages/New';
 import Missing from './pages/Missing';
 
