@@ -92,6 +92,8 @@ const App = () => {
   const [friends, setFriends] = useState([]);
   const [today, setToday] = useState([]);
   const [birthMonth, setBirthMonth] = useState(0);
+  const [friendName, setFriendName] = useState('');
+  const [friendDay, setFriendDay] = useState('');
 
   useEffect(() => {
     setFriends(friendList);
@@ -128,6 +130,8 @@ const App = () => {
               friends={friends}
               setBirthMonth={setBirthMonth}
               birthMonth={birthMonth}
+              friendDay={friendDay}
+              setFriendDay={setFriendDay}
             />
           }
         />
@@ -137,7 +141,14 @@ const App = () => {
         />
         <Route
           path='/new'
-          element={<New friends={friends} handleSubmit={handleSubmit} />}
+          element={
+            <New
+              friends={friends}
+              handleSubmit={handleSubmit}
+              setFriendName={setFriendName}
+              friendName={friendName}
+            />
+          }
         />
         <Route path='*' element={<Missing />} />
       </Routes>

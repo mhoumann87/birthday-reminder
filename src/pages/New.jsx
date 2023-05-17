@@ -1,29 +1,33 @@
-const New = ({ handleSubmit }) => {
+import Input from '../components/Input';
+
+const New = ({
+  handleSubmit,
+  setFriendName,
+  friendName,
+  friendDay,
+  setFriendDay,
+}) => {
   return (
     <main className='grid new-friend'>
       <section className='card flex shadow padding'>
         <h2>Add Friend</h2>
         <form onSubmit={handleSubmit} className='flex'>
-          <label htmlFor='name' className='sr-only'>
-            Enter Name
-          </label>
-          <input
+          <Input
             type='text'
             name='name'
-            id='name'
-            placeholder='Enter Name'
-            required
+            info='Enter Name'
+            required={true}
+            value={friendName}
+            onChange={setFriendName}
           />
 
-          <label htmlFor='day' className='sr-only'>
-            Enter birthday day
-          </label>
-          <input
-            type='text'
+          <Input
+            type='number'
             name='day'
-            id='day'
-            placeholder='Enter birthday day'
-            required
+            info='Enter birthday day'
+            required={true}
+            value={friendDay}
+            onChange={setFriendDay}
           />
 
           <label htmlFor='month' className='sr-only'>
