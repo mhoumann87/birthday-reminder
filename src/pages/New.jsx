@@ -19,6 +19,8 @@ const New = ({
             required={true}
             value={friendName}
             onChange={setFriendName}
+            min=''
+            max=''
           />
 
           <Input
@@ -28,6 +30,8 @@ const New = ({
             required={true}
             value={friendDay}
             onChange={setFriendDay}
+            min={1}
+            max={31}
           />
 
           <label htmlFor='month' className='sr-only'>

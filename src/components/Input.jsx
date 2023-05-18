@@ -1,4 +1,6 @@
-const Input = ({ type, name, info, required, value, onChange }) => {
+const Input = ({ type, name, info, required, value, onChange, min, max }) => {
+  const minVal = min !== '' ? `min=${min}` : '';
+
   return (
     <>
       <label htmlFor={name} className='sr-only'>
